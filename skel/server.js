@@ -12,15 +12,6 @@ if (production) {
 }
 else {
 	console.log('[dev]');
-	let config = require('./dev.babel').default,
-		compiler = require('webpack')(config),
-		dev = require('webpack-dev-middleware'),
-		hot = require('webpack-hot-middleware');
-
-	app.use(dev(compiler, {
-		noInfo: true,
-		publicPath: config.output.publicPath
-	})).use(hot(compiler));
 }
 
 import { makeHTMLDriver } from '@cycle/dom';

@@ -7,7 +7,7 @@
     "test": ":",
     "start": "NODE_ENV=production babel-node .",
     "build": "NODE_ENV=production webpack -p --config ./pro.babel.js",
-    "dev": "NODE_ENV=development babel-node ."
+    "dev": "NODE_ENV=development webpack --config ./dev.babel.js"
   },
   "keywords": [
     "--name--"
@@ -17,10 +17,7 @@
   "devDependencies": {
     "babel-core": "^6.1.21",
     "babel-loader": "^6.2.0",
-    "piping": "^0.3.0",
-    "webpack": "^1.12.6",
-    "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^2.5.0"
+    "piping": "^0.3.0"
   },
   "dependencies": {
     "@cycle/core": "^6.0.0-rc2",

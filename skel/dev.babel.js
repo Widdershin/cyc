@@ -9,8 +9,7 @@ export default {
 	],
 	output: {
 		path: path.join(__dirname, 'dist'),
-		filename: 'bundle.js',
-		publicPath: '/lib/'
+		filename: 'bundle.js'
 	},
 	plugins: [
 		new w.HotModuleReplacementPlugin(),
@@ -19,5 +18,11 @@ export default {
 	],
 	module: {
 		loaders: [{ test: /\.js$/, loader: 'babel-loader' }]
+	},
+	devServer: {
+		noInfo: true,
+		publicPath: '/lib/',
+		hot: true,
+		inline: true
 	}
 };
